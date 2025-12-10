@@ -1,28 +1,47 @@
-const fastify = require("fastify")({
+import fastify, { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
+import path from "path";
+import { fileURLToPath } from "url";
+import fastifyStatic from "@fastify/static";
+import fastifyFormBody from "@fastify/formbody";
+import fastifyMultipart from "@fastify/multipart";
+import fastifyView from "@fastify/view";
+import handlebars from "handlebars";
+import { IncomingMessage, ServerResponse } from "http";
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Create Fastify instance
+const app: FastifyInstance = fastify({
   logger: false
 });
 
-const path = require("path");
-
-fastify.register(require("@fastify/static"), {
+// Register plugins
+app.register(fastifyStatic, {
   root: path.join(__dirname, "../public"),
   prefix: "/",
 });
 
-fastify.register(require("@fastify/formbody"));
-fastify.register(require("@fastify/multipart"));
+app.register(fastifyFormBody);
+app.register(fastifyMultipart);
 
-fastify.register(require("@fastify/view"), {
+app.register(fastifyView, {
   engine: {
-    handlebars: require("handlebars"),
+    handlebars: handlebars,
   },
 });
 
-fastify.get("/", (request, reply) => {
+// Define routes
+app.get("/", async (request: FastifyRequest, reply: FastifyReply) => {
   return reply.view("../src/pages/index.html");
 });
 
-module.exports = async (req, res) => {
-  await fastify.ready();
-  fastify.server.emit("request", req, res);
-};
+// Export the Vercel/Serverless handler
+export default async function handler(req: IncomingMessage, res: ServerResponse) {
+  await app.ready();
+  app.server.emit("request", req, res);
+}
+
+// If you need CommonJS export (for some environments)
+// export { app };
