@@ -14,27 +14,41 @@ const __dirname = path.dirname(__filename);
 
 // Create Fastify instance
 const app: FastifyInstance = fastify({
-  logger: false
+  logger: true  // Enable logging to see errors
 });
 
 // Register plugins
 app.register(fastifyStatic, {
-  root: path.join(__dirname, "../public"),
+  root: path.join(__dirname, "public"),  // Adjusted path
   prefix: "/",
 });
 
-app.register(fastifyFormBody);
+app.register(fastifyFormbody);
 app.register(fastifyMultipart);
 
+// Configure view engine with absolute path
 app.register(fastifyView, {
   engine: {
     handlebars: handlebars,
   },
+  root: path.join(__dirname, "src/pages"),  // Set the root directory for templates
+  viewExt: "html",  // Tell Fastify to treat .html as handlebars files
 });
 
 // Define routes
 app.get("/", async (request: FastifyRequest, reply: FastifyReply) => {
-  return reply.view("../src/pages/index.html");
+  // Now just use the filename since root is set
+  return reply.view("index.html");
+});
+
+// Add error handler for debugging
+app.setErrorHandler((error, request, reply) => {
+  console.error("Fastify Error:", error);
+  reply.status(500).send({ 
+    error: "Internal Server Error",
+    message: error.message,
+    stack: process.env.NODE_ENV === "development" ? error.stack : undefined
+  });
 });
 
 // Export the Vercel/Serverless handler
@@ -42,6 +56,3 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   await app.ready();
   app.server.emit("request", req, res);
 }
-
-// If you need CommonJS export (for some environments)
-// export { app };
