@@ -9,7 +9,7 @@
     "typescript": "5.8.3"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc server.ts",
     "start": "node server.js"
   }
 }
