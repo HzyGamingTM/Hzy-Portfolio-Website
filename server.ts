@@ -5,16 +5,12 @@ import fastifyStatic from "@fastify/static";
 import fs from "fs/promises";
 import { IncomingMessage, ServerResponse } from "http";
 
-import { inject } from '@vercel/analytics';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app: FastifyInstance = fastify({
   logger: true
 });
-
-inject();
 
 app.register(fastifyStatic, {
   root: path.join(__dirname, "public"),
