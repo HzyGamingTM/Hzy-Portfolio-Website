@@ -23,7 +23,7 @@ app.register(fastifyStatic, {
   prefix: "/",
 });
 
-app.register(fastifyFormbody);
+app.register(fastifyFormBody);
 app.register(fastifyMultipart);
 
 // Configure view engine with absolute path
