@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import fastifyStatic from "@fastify/static";
 import fs from "fs/promises";
+import { IncomingMessage, ServerResponse } from "http";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -34,6 +35,9 @@ app.get("/", async (request: FastifyRequest, reply: FastifyReply) => {
   }
 });
 
-app.get("/simple", async (request: FastifyRequest, reply: FastifyReply) => {
-  reply.redirect("/pages/index.html");
-});
+
+// Vercel serverless handler
+export default async function handler(req: IncomingMessage, res: ServerResponse) {
+  await app.ready();
+  app.server.emit("request", req, res);
+}
