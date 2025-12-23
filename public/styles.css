@@ -232,13 +232,13 @@ a:hover {
   margin-right: auto;
   
   display: block;
-  
+    
   filter: drop-shadow(0 0 0.5rem rgb(255, 255, 255));
   border-radius: 100%;
 }
 
 #bio-text {
-  text-align: center;
+  text-align: justify;
   color: var(--dark-fg);
   display: block;
   padding-top: 30px;
