@@ -1,9 +1,13 @@
-import fastify, { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 import path from "path";
-import { fileURLToPath } from "url";
-import fastifyStatic from "@fastify/static";
 import fs from "fs/promises";
+
+import { fileURLToPath } from "url";
 import { IncomingMessage, ServerResponse } from "http";
+
+import fastify, { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
+import fastifyStatic from "@fastify/static";
+import fastifyCompress from "@fastify/compress";
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,6 +15,8 @@ const __dirname = path.dirname(__filename);
 const app: FastifyInstance = fastify({
   logger: true
 });
+
+app.register(fastifyCompress, { threshold: 2048 })
 
 app.register(fastifyStatic, {
   root: path.join(__dirname, "public"),
