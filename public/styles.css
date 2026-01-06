@@ -5,9 +5,9 @@
 }
 
 
-@font-face {
-  font-family: FFiraCode;
-  src: url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+.fira-code {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
 }
 
 /* Main */
@@ -32,7 +32,7 @@ body {
   
   background-color: var(--dark-bg);
 
-  font-family: FFiraCode;
+  font-family: fira-code;
   
   display: flex;
   flex-direction: column;
