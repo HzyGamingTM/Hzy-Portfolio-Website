@@ -1,14 +1,3 @@
-/* Fonts */
-@font-face {
-  font-family: segoe-symbol;
-  src: url("https://cdn.glitch.global/6889b0fc-857c-4287-b9d1-8dea274a278e/segoe-ui-symbol.ttf?v=1740492345119");
-}
-
-
-.fira-code {
-  font-optical-sizing: auto;
-}
-
 /* Main */
 html {
   scroll-behavior: smooth;
@@ -31,7 +20,7 @@ body {
   
   background-color: var(--dark-bg);
 
-  font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code';
   
   display: flex;
   flex-direction: column;
