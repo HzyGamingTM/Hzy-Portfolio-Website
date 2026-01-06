@@ -348,7 +348,7 @@ a:hover {
   flex-direction: row;
   padding-top: 100px;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 64px;
 }
 
