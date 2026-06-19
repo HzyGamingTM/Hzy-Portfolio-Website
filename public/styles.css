@@ -60,6 +60,16 @@ a:hover {
   animation: blink-caret 1s step-end infinite;
 }
 
+#intro-text-caret {
+  color: var(--dark-fg);
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5px;
+  animation: blink-caret 1s step-end infinite;
+}
+
+
 @keyframes blink-caret {
   from, to {
     color: transparent;

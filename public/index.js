@@ -40,3 +40,27 @@ document.addEventListener("keydown", (e) => {
       while (cube.material.color.r >= 1) cube.material.color.r -= 0x000001;
     }
 });
+
+function setCubeColor(section) {
+  switch (section) {
+    case "home":
+      cube.material.color = new THREE.Color(0xFFFFFF);
+      break;
+    case "about":
+      cube.material.color = new THREE.Color(0x03fc90);
+      break;
+    case "skills":
+      cube.material.color = new THREE.Color(0xfc9d03);
+      break;
+    case "projects":
+      cube.material.color = new THREE.Color(0xfc2003);
+      break;
+    case "writeups":
+      cube.material.color = new THREE.Color(0x7703fc);
+      break;
+    case "contacts":
+      cube.material.color = new THREE.Color(0xfcf403);
+      break;
+  }
+}
+window.setCubeColor = setCubeColor;

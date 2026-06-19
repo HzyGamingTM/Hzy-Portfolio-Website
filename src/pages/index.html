@@ -19,6 +19,7 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
+
 		<div class="content-div">
 			<div class="introduction-div" id="introduction-div">    
 				<div id="center-div-intro">
@@ -36,32 +37,43 @@
 			
 			<div class="nav-bar-div" id="nav-bar-div">
 				<a class="nav-bar-current-item nav-bar-items" onclick="document.getElementById('introduction-div').scrollIntoView();">&lt;/Home&gt;</a>
-				<a class="nav-bar-items" href="#profile-div">&lt;/About&gt;</a>
-				<a class="nav-bar-items" href="#skills-div">&lt;/Skills&gt;</a>
-				<a class="nav-bar-items" href="#projects-div">&lt;/Projects&gt;</a>
-				<a class="nav-bar-items" href="#writeup-div">&lt;/Write Ups&gt;</a>
-				<a class="nav-bar-items" href="#contacts-div">&lt;/Contacts&gt;</a>
+				<a onclick="setCubeColor(`about`)" class="nav-bar-items" href="#profile-div">&lt;/About&gt;</a>
+				<a onclick="setCubeColor(`skills`)" class="nav-bar-items" href="#skills-div">&lt;/Skills&gt;</a>
+				<a onclick="setCubeColor(`projects`)" class="nav-bar-items" href="#projects-div">&lt;/Projects&gt;</a>
+				<a onclick="setCubeColor(`writeups`)" class="nav-bar-items" href="#writeup-div">&lt;/Write Ups&gt;</a>
+				<a onclick="setCubeColor(`contacts`)" class="nav-bar-items" href="#contacts-div">&lt;/Contacts&gt;</a>
 			</div>
 
-			<div id="profile-div">
+			<section id="profile-div">
 				<h1 class="header">&lt;/About Me&gt;</h1>
 				<img id="profile-img" src="profile.png">
 				<div id="bio-div">
-					<p id="bio-text">
-						I'm a Year 2 Student of Anderson Serangoon Junior College based in Singapore studying the H2 Computing subject with a deep passion for Software Development for the purpose of creating software solutions for the world.
-						<br>
-						<br>
-						I regularly participate in ⛳ Capture The Flag (CTF) competitions and have written writeups to document my journey in learning Cybersecurity as a hobby. To further my passion in Cybersecurity, I've cofounded an external CTF competition (ASRCTF) for ASRJC to promote interest for Cybersecurity amongst students in Singapore.
-						<br>
-						<br>
-						I have nearly 6 years of programming experience across multiple programming languages:
-						<br>
-						<br>
-						Python, Java, C#, HTML, CSS, Javascript, Swift, Lua
-					</p>
+					<div id="bio-text">
+						<div style="display: flex; flex-direction: row;">
+							<h2>> whoami</h2><h2 id="intro-text-caret">|</h2>
+						</div>
+						<p>
+							I'm a Year 2 Student of Anderson Serangoon Junior College based in Singapore studying the H2 Computing subject with a deep passion for Software Development for the purpose of creating software solutions for the world.
+						</p>
+						<div style="display: flex; flex-direction: row;">
+							<h2>> info</h2><h2 id="intro-text-caret">|</h2>
+						</div>
+						<p>
+							I regularly participate in ⛳ Capture The Flag (CTF) competitions and have written writeups to document my journey in learning Cybersecurity as a hobby. To further my passion in Cybersecurity, I've cofounded an external CTF competition (ASRCTF) for ASRJC to promote interest for Cybersecurity amongst students in Singapore.
+						</p>
+						<div style="display: flex; flex-direction: row;">
+							<h2>> history</h2><h2 id="intro-text-caret">|</h2>
+						</div>
+						<p>
+							I have nearly 6 years of programming experience across multiple programming languages:
+							<br>
+							<br>
+							Python, Java, C#, HTML, CSS, Javascript, Swift, Lua
+						</p>
+					</div>
 				</div>
 				
-				<div id="skills-div">
+				<section id="skills-div">
 					<h1 class="header">&lt;/Skills&gt;</h1>
 					<div id="skills-container-div">
 						<div class="skills-category-container-div">
@@ -270,9 +282,9 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 				
-				<div id="projects-div">
+				<section id="projects-div">
 					<h1 class="header">&lt;/Projects&gt;</h1>
 
 					<div class="contribution-div">
@@ -374,9 +386,9 @@
 						</a>
 					</div>
 
-				</div>
+				</section>
 
-				<div id="writeup-div">
+				<section id="writeup-div">
 					<h1 class="header">&lt;/CTF Write Ups&gt;</h1>
 					<div class="writeup-entry-div">
 						<div class="writeup-text-div">
@@ -388,7 +400,6 @@
 						<a href="https://medium.com/@hzygamingtm/first-ctf-write-up-gctf-3b4a667cb3d8" class="projects-img-a">
 							<img class="write-up-gctf-img" src="gctf_writeups.png">          
 						</a>
-						</div>
 					</div>
 
 					<div class="writeup-entry-div">
@@ -402,9 +413,9 @@
 							<img class="projects-img" src="asrctf_writeups.png">          
 						</a>
 					</div>
-				</div>
+				</section>
 
-				<div id="contacts-div">
+				<section id="contacts-div">
 					<h1 class="header">&lt;/Contacts&gt;</h1>
 					<div id="contacts-container">
 						<a href="https://github.com/HzyGamingTM" class="contact-article">
@@ -423,8 +434,8 @@
 							<img class="contact-img" src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Discord.svg">
 						</a>
 					</div>
-				</div>
-			</div>
+				</section>
+			</section>
 		</div>
 	</body>
 </html>
