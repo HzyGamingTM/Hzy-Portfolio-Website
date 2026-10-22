@@ -3,6 +3,7 @@
   "type": "module",
   "dependencies": {
     "@fastify/compress": "^9.2.0",
+    "@fastify/static": "^10.1.7",
     "@vercel/analytics": "^2.0.1",
     "fastify": "^5.12.0"
   },
