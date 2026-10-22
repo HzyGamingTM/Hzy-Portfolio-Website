@@ -33,6 +33,12 @@ a:hover {
   color: var(--dark-acc-blue);
 }
 
+@media(max-width: 640px) {
+  p {
+    font-size: 0.8em;
+  }
+}
+
 /* Home */
 
 #name-div {
@@ -145,6 +151,12 @@ a:hover {
 
 /* Nav Bar */
 
+@media (max-width: 950px) {
+  .nav-bar-hidden {
+    display: none;
+  }
+}
+
 .nav-bar-div {
   height: 50px;
   background-color: var(--dark-bg-2);
@@ -203,8 +215,9 @@ a:hover {
   background-color: var(--dark-bg-1);
   display: flex;
   flex-direction: column;
-  padding: 0px 64px;
+  padding: 0px 32px;
 }
+
 
 .header {
   margin-top: 100px;
@@ -215,6 +228,12 @@ a:hover {
   
   font-size: 3em;
   color: var(--dark-acc-red);
+}
+
+@media(max-width: 420px) {
+  .header {
+    font-size: 2em;
+  }
 }
 
 #profile-img {
@@ -240,7 +259,6 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   max-width: 640px;
-  font-size: 1.2em;
 }
 
 #bio-div {
@@ -362,12 +380,17 @@ a:hover {
   gap: 64px;
 }
 
+@media(max-width: 738px) {
+  .contribution-div {
+    flex-direction: column;
+  }
+}
+
 .projects-text {
   text-align: justify;
   color: var(--dark-fg);
   display: block;
   margin: 0px;
-  font-size: 1.2em;
 }
 
 .project-text-div {
@@ -404,8 +427,8 @@ a:hover {
 
 #projects-img-music-bot {
   border-radius: 4px;
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
 }
 
 .div_content {
@@ -425,11 +448,15 @@ a:hover {
   filter: brightness(60%) blur(2px);
 }
 
+
+
 #writeup-div {
   display: flex;
   flex-direction: column;
   padding-top: 100px;
 }
+
+
 
 .writeup-entry-div {
   display: flex;
@@ -437,7 +464,14 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 64px;
-  padding: 100px 64px;
+  padding: 100px 0px;
+}
+
+
+@media (max-width: 552px) {
+  .writeup-entry-div {
+    flex-direction: column;
+  }
 }
 
 .writeup-text-div {
@@ -456,7 +490,6 @@ a:hover {
   color: var(--dark-fg);
   display: block;
   margin: 0px;
-  font-size: 1.2em;
 }
 
 .write-up-gctf-img {
@@ -471,7 +504,7 @@ a:hover {
   background-color: var(--dark-bg-1);
   display: flex;
   flex-direction: column;
-  padding: 0px 64px;
+  padding: 0px 32px;
 }
 
 #contacts-container {
@@ -499,4 +532,10 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer-text {
+  color: darkgray;
+  margin-top: 50px;
+  text-align: center;
 }

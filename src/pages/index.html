@@ -46,11 +46,11 @@
 			
 			<div class="nav-bar-div" id="nav-bar-div">
 				<a class="nav-bar-current-item nav-bar-items" onclick="document.getElementById('introduction-div').scrollIntoView();">&lt;/Home&gt;</a>
-				<a onclick="setCubeColor(`about`)" class="nav-bar-items" href="#profile-div">&lt;/About&gt;</a>
-				<a onclick="setCubeColor(`skills`)" class="nav-bar-items" href="#skills-div">&lt;/Skills&gt;</a>
-				<a onclick="setCubeColor(`projects`)" class="nav-bar-items" href="#projects-div">&lt;/Projects&gt;</a>
-				<a onclick="setCubeColor(`writeups`)" class="nav-bar-items" href="#writeup-div">&lt;/Write Ups&gt;</a>
-				<a onclick="setCubeColor(`contacts`)" class="nav-bar-items" href="#contacts-div">&lt;/Contacts&gt;</a>
+				<a onclick="setCubeColor(`about`)" class="nav-bar-items nav-bar-hidden" href="#profile-div">&lt;/About&gt;</a>
+				<a onclick="setCubeColor(`skills`)" class="nav-bar-items nav-bar-hidden" href="#skills-div">&lt;/Skills&gt;</a>
+				<a onclick="setCubeColor(`projects`)" class="nav-bar-items nav-bar-hidden" href="#projects-div">&lt;/Projects&gt;</a>
+				<a onclick="setCubeColor(`writeups`)" class="nav-bar-items nav-bar-hidden" href="#writeup-div">&lt;/Write Ups&gt;</a>
+				<a onclick="setCubeColor(`contacts`)" class="nav-bar-items nav-bar-hidden" href="#contacts-div">&lt;/Contacts&gt;</a>
 			</div>
 
 			<section id="profile-div">
@@ -286,7 +286,7 @@
 									<img class="skill-img" src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Kubernetes.svg"><br>
 									<h4 class="language-skill-header">Docker / Kubernetes</h4>
 									<p class="language-skill-text">Beginner</p>
-									<p class="language-skill-text-years">3 Months experience</p>
+									<p class="language-skill-text-years">6 Months experience</p>
 								</div>
 							</div>
 						</div>
@@ -295,10 +295,34 @@
 				
 				<section id="projects-div">
 					<h1 class="header">&lt;/Projects&gt;</h1>
+					
+					<div class="contribution-div">
+						<div class="project-text-div">
+							<h2 class="projects-text-header">ASRCTF Publicity Website</h2>
+							<p class="projects-text">
+								Developed a <a href="https://asr-ctf-website.vercel.app/">Publicity Website</a> for ASRCTF, an external Capture the Flag (CTF) competition organised by students from ASRJC for Secondary School and JC students in Singapore, which I had helped cofounded.
+							</p>
+						</div>
+						<a href="https://asr-ctf-website.vercel.app" class="projects-img-a">
+							<img class="projects-img" src="asrctf_web.png">
+						</a>
+					</div>
 
 					<div class="contribution-div">
 						<div class="project-text-div">
-							<h2 class="projects-text-header">Late Apps:</h2>
+							<h2 class="projects-text-header">ASRCTF Challenge platform</h2>
+							<p class="projects-text">
+								Created a custom <a href="https://ctfd.io/">CTFd</a> theme for hosting challenges for <a href="https://asr-ctf-website.vercel.app">ASRCTF</a> for both Qualifiers and Finals of ASRCTF on June 3rd and 5th.	
+							</p>
+						</div>
+						<a href="https://asr-ctf-website.vercel.app" class="projects-img-a">
+							<img class="projects-img" src="asrctfd.png">
+						</a>
+					</div>
+
+					<div class="contribution-div">
+						<div class="project-text-div">
+							<h2 class="projects-text-header">Late Apps</h2>
 							<p class="projects-text">
 								Contributed to a latecomings tracker web
 								application <a href="https://legitimate-skeletal-figure.anvil.app/ ">(Late Apps)</a> using Python
@@ -309,10 +333,34 @@
 							<img class="projects-img" src="lateapps.png">
 						</a>
 					</div>
+
+					<div class="contribution-div">
+						<div class="project-text-div">
+							<h2 class="projects-text-header">Scones Museum Queue System</h2>
+							<p class="projects-text">
+								Co-developed a comissioned <a href="https://github.com/HzyGamingTM/scones-cafe-queue-system">Queue System</a> for a museum booth For ACJC Fun O Rama
+							</p>
+						</div>
+						<a href="https://github.com/HzyGamingTM/scones-cafe-queue-system" class="projects-img-a">
+							<img id="projects-img-music-bot" src="scones.png">
+						</a>
+					</div>
 					
 					<div class="contribution-div">
 						<div class="project-text-div">
-							<h2 class="projects-text-header">Backrooms Game:</h2>
+							<h2 class="projects-text-header">Photography Game</h2>
+							<p class="projects-text">
+								Created a <a href="https://github.com/HzyGamingTM/Photography-Game">Photography Game</a> for Photographic Society CCA for members of public to try out the basics of photography, during Anderson Serangoon Junior College Open House.
+							</p>
+						</div>
+						<a href="https://github.com/HzyGamingTM/Photography-Game" class="projects-img-a">
+							<img class="projects-img" src="photography_game.png">
+						</a>
+					</div>
+
+					<div class="contribution-div">
+						<div class="project-text-div">
+							<h2 class="projects-text-header">Backrooms Game</h2>
 							<p class="projects-text">
 								Worked on a horror game with the <a href="https://unity.com/">Unity Game Engine</a> for 2 years as a personal project. <a href="https://github.com/HzyGamingTM/Unity-Backrooms-Game/tree/master">(Backrooms Game)</a>
 							</p>
@@ -324,7 +372,7 @@
 
 					<div class="contribution-div">
 						<div class="project-text-div">
-							<h2 class="projects-text-header">Music Discord Bot:</h2>
+							<h2 class="projects-text-header">Music Discord Bot</h2>
 							<p class="projects-text">
 								Worked on a music bot application on <a href="https://discord.com">Discord</a>.
 							</p>
@@ -336,7 +384,7 @@
 
 					<div class="contribution-div">
 						<div class="project-text-div">
-							<h2 class="projects-text-header">Osu Capital:</h2>
+							<h2 class="projects-text-header">Osu Capital</h2>
 							<p class="projects-text">
 								Currently working on v2 of a simulated stock exchange website, <a href="https://osucapital.com/dashboard">osu! captial</a>, that mimics stock price based on player performance on the <a href="https://osu.ppy.sh">Osu!</a> Rythmn Game.
 							</p>
@@ -357,44 +405,6 @@
 							<img class="projects-img-music-bot" src="https://papermc.io/assets/logo/256x.png">          
 						</a>
 					</div>
-
-					<div class="contribution-div">
-						<div class="project-text-div">
-							<h2 class="projects-text-header">Photography Game</h2>
-							<p class="projects-text">
-								Created a <a href="https://github.com/HzyGamingTM/Photography-Game">Photography Game</a> for Photographic Society CCA for members of public to try out the basics of photography, during Anderson Serangoon Junior College Open House.
-							</p>
-						</div>
-						<a href="https://github.com/HzyGamingTM/Photography-Game" class="projects-img-a">
-							<img class="projects-img" src="photography_game.png">
-						</a>
-					</div>
-
-					<div class="contribution-div">
-						<div class="project-text-div">
-							<h2 class="projects-text-header">ASRCTF Publicity Website</h2>
-							<p class="projects-text">
-								Developed a <a href="https://asr-ctf-website.vercel.app/">Publicity Website</a> for ASRCTF, an external Capture the Flag (CTF) competition organised by students from ASRJC for Secondary School and JC students in Singapore, which I had helped cofounded.
-							</p>
-						</div>
-						<a href="https://asr-ctf-website.vercel.app" class="projects-img-a">
-							<img class="projects-img" src="asrctf_web.png">
-						</a>
-					</div>
-
-
-					<div class="contribution-div">
-						<div class="project-text-div">
-							<h2 class="projects-text-header">ASRCTF Challenge platform</h2>
-							<p class="projects-text">
-								Created a custom <a href="https://ctfd.io/">CTFd</a> theme for hosting challenges for <a href="https://asr-ctf-website.vercel.app">ASRCTF</a> for both Qualifiers and Finals of ASRCTF on June 3rd and 5th.	
-							</p>
-						</div>
-						<a href="https://asr-ctf-website.vercel.app" class="projects-img-a">
-							<img class="projects-img" src="asrctfd.png">
-						</a>
-					</div>
-
 				</section>
 
 				<section id="writeup-div">
@@ -423,8 +433,9 @@
 						</a>
 					</div>
 				</section>
+			</section>
 
-				<section id="contacts-div">
+			<section id="contacts-div">
 					<h1 class="header">&lt;/Contacts&gt;</h1>
 					<div id="contacts-container">
 						<a href="https://github.com/HzyGamingTM" class="contact-article">
@@ -444,7 +455,10 @@
 						</a>
 					</div>
 				</section>
-			</section>
 		</div>
+		<div>
+		<footer class="footer-text">
+			This website not generated by AI | Developed by hzy
+		</footer>
 	</body>
 </html>
