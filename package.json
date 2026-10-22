@@ -3,7 +3,7 @@
   "type": "module",
   "dependencies": {
     "@fastify/compress": "^9.2.0",
-    "@fastify/static": "^10.1.7",
+    "@fastify/static": "^8.3.0",
     "@vercel/analytics": "^2.0.1",
     "fastify": "^5.12.0"
   },
@@ -11,5 +11,7 @@
     "@types/node": "26.2.0",
     "typescript": "5.9.2"
   },
-  "engines": { "node": "22.x" }
+  "engines": {
+    "node": "22.x"
+  }
 }
